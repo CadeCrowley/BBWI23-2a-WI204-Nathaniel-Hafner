@@ -1,0 +1,41 @@
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; // Hauptfarbe für den Text
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd; // Unterstreichung unter der Überschrift
+    padding-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+
+    // Styling für japanische Schriftzeichen
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #555; // Dezenter Farbton für Text
+    text-align: center;
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+
+    // Wenn japanischer Text benutzt wird, optimiere die Schrift
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 150px; // Maximale Breite des Bildes
+    height: auto; // Proportionale Höhe
+    border-radius: 50%; // Rundes Profilbild
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Schatteneffekt
+    border: 3px solid #ddd; // Umrandung um das Bild
+
+    // Hover-Effekt
+    &:hover {
+        transform: scale(1.1); // Vergrößerung bei Hover
+        transition: transform 0.3s ease;
+    }
+}
