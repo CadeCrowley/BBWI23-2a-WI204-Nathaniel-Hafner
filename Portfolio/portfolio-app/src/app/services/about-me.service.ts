@@ -6,6 +6,6 @@ import { AboutMe } from '../models/about-me';
 export class AboutMeService {
  constructor() { }
  getAboutMe(): AboutMe {
- return new AboutMe('ナタニエル', '/assets/profile.jpg');
+ return new AboutMe('Nathaniel Hafner', '/assets/profile.jpg');
  }
 }

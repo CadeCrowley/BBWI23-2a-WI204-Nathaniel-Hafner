@@ -1,0 +1,12 @@
+{
+    "TITLE": "My Portfolio",
+    "SLOGAN": "I am a tech enthusiast with a passion for innovation, gaming, and Japanese culture.",
+    "MENU": {
+      "ABOUT_ME": "About Me",
+      "RESUME": "Resume",
+      "SETTINGS": "Settings",
+      "PROFILE": "Profile",
+      "LOGOUT": "Logout"
+    }
+  }
+  

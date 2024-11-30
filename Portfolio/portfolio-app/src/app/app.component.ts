@@ -6,9 +6,20 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  ngAfterViewInit() {
-    const elems = document.querySelectorAll('.dropdown-trigger');
-    // @ts-ignore
-    M.Dropdown.init(elems); // TypeScript-Fehler ignorieren
+  currentLanguage: string = 'de'; // Standard-Sprache (Japanisch)
+
+  ngAfterViewInit(): void {
+    // Initialisiere alle Dropdowns (Sprachwahl und Hamburger-Menü)
+    const dropdownElems = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(dropdownElems, {
+      coverTrigger: false, // Dropdown erscheint unterhalb des Triggers
+      closeOnClick: true   // Dropdown schließt nach Auswahl
+    });
+  }
+
+  // Sprachumschaltung
+  switchLanguage(lang: string): void {
+    this.currentLanguage = lang;
+    console.log(`Sprache geändert zu: ${lang}`);
   }
 }

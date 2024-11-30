@@ -1,41 +1,112 @@
-h1 {
+/* Allgemeine Einstellungen */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Moderne Schriftart */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Heller Hintergrund */
+    color: #333;
+  }
+  
+  /* Hauptüberschrift */
+  h1 {
     font-size: 2.5rem;
-    font-weight: bold;
-    color: #333; // Hauptfarbe für den Text
+    color: #ff5722; /* Orange Akzent */
     text-align: center;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ddd; // Unterstreichung unter der Überschrift
-    padding-bottom: 10px;
-    font-family: 'Arial', sans-serif;
-
-    // Styling für japanische Schriftzeichen
-    font-family: 'Noto Sans JP', sans-serif;
-    letter-spacing: 1px;
-}
-
-p {
-    font-size: 1.5rem;
-    color: #555; // Dezenter Farbton für Text
+    margin: 20px 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Leichter Schatten */
+  }
+  
+  /* Paragraph Styling */
+  p {
+    font-size: 1.2rem;
     text-align: center;
     margin: 10px 0;
-    font-family: 'Arial', sans-serif;
-
-    // Wenn japanischer Text benutzt wird, optimiere die Schrift
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
-img {
+    color: #555;
+  }
+  
+  /* Bild Styling */
+  img {
     display: block;
+    max-width: 150px; /* Begrenzte Bildbreite */
     margin: 20px auto;
-    max-width: 150px; // Maximale Breite des Bildes
-    height: auto; // Proportionale Höhe
-    border-radius: 50%; // Rundes Profilbild
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Schatteneffekt
-    border: 3px solid #ddd; // Umrandung um das Bild
-
-    // Hover-Effekt
+    border-radius: 50%; /* Rundes Profilbild */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sanfter Schatten */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
     &:hover {
-        transform: scale(1.1); // Vergrößerung bei Hover
-        transition: transform 0.3s ease;
+      transform: scale(1.1); /* Vergrößern beim Hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Tieferer Schatten */
     }
-}
+  }
+  
+  /* Kartencontainer */
+  .card {
+    background: linear-gradient(90deg, #ff5722, #e53935); /* Farbverlauf */
+    border-radius: 12px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+    margin: 20px auto;
+    max-width: 800px;
+    overflow: hidden;
+  
+    /* Kartentitel */
+    .card-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #fff; /* Weißer Text */
+    }
+  
+    /* Inhalt */
+    .card-content {
+      color: #fff;
+      font-size: 1rem;
+      line-height: 1.8;
+  
+      p {
+        margin: 0;
+      }
+    }
+  
+    /* Aktionen */
+    .card-action {
+      background: #fff; /* Weißer Hintergrund */
+      padding: 15px;
+      text-align: right;
+  
+      a {
+        color: #ff5722; /* Orange */
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: #e53935; /* Rot beim Hover */
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    img {
+      max-width: 100px;
+    }
+  
+    .card {
+      max-width: 90%;
+      padding: 10px;
+    }
+  }
+  

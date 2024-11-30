@@ -1,6 +1,78 @@
-.row {
-    display: flex;
-    justify-content: center; /* Zentriert horizontal */
-    align-items: center;    /* Zentriert vertikal */
-    margin: 0;              /* Keine Ränder */
-}
+/* Navbar Styling */
+.nav-wrapper {
+    background: linear-gradient(90deg, #ff5722, #ff9800); /* Farbverlauf */
+    padding: 0 20px; /* Abstand innen */
+    height: 64px; /* Feste Höhe */
+    box-sizing: border-box; /* Padding berücksichtigen */
+  }
+  
+  /* Brand-Logo */
+  .brand-logo {
+    font-family: 'Aptos', sans-serif; /* Elegante Schriftart */
+    font-size: 2rem; /* Größere Schrift */
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap; /* Kein Zeilenumbruch */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Schatten für mehr Tiefe */
+    margin: 0;
+  }
+  
+  /* Sprachwahl und Hamburger-Menü */
+  .right {
+    
+    gap: 40px; /* Abstand zwischen Sprachwahl und Menü */
+  }
+  
+  /* Sprachwahl */
+  .right .dropdown-trigger {
+    display: flex; /* Sprachwahl als flexibles Element */
+    color: #ffffff; /* Weißer Text */
+    font-size: 14px; /* Schriftgröße */
+    text-decoration: none;
+  }
+  
+  .right .dropdown-trigger i {
+    margin-right: 5px; /* Abstand zwischen Icon und Text */
+  }
+  
+  .right .dropdown-trigger:hover {
+    color: #ffd700; /* Goldene Farbe beim Hover */
+  }
+  
+  /* Hamburger-Menü */
+  .sidenav-trigger {
+    color: #ffffff; /* Weißes Icon */
+    font-size: 24px; /* Größeres Icon */
+    cursor: pointer; /* Zeigt Klickbarkeit an */
+  }
+  
+  /* Dropdown Styling */
+  .dropdown-content {
+    min-width: 150px; /* Breite des Dropdowns */
+    padding: 10px 0; /* Abstand oben und unten */
+  }
+  
+  .dropdown-content li > a {
+    font-size: 14px; /* Schriftgröße */
+    color: #333; /* Dunklere Schriftfarbe */
+    padding: 10px 15px; /* Innenabstand */
+    display: block;
+  }
+  
+  .dropdown-content li > a:hover {
+    background-color: #f1f1f1; /* Hellgrauer Hintergrund */
+    color: #ff5722; /* Orange */
+  }
+  
+  /* Mobile-Menü (Sidenav) */
+  .sidenav {
+    background-color: #f5f5f5; /* Heller Hintergrund */
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    color: #333;
+    font-size: 16px;
+
+  }
+  
