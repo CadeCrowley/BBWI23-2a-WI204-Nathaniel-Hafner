@@ -6,85 +6,24 @@
 
     <section>
         <h2>Berufserfahrung</h2>
-
-        <div>
-            <p class="job-title">Technischer Systemspezialist</p>
-            <p class="company">Teltronic AG, Biberist</p>
-            <p class="date">September 2024 – heute</p>
+        @if (formGroup) {
+            <form [formGroup]=formGroup (ngSubmit)="saveCV()">
+             <input type="number" formControlName="id" hidden>
+             <input type="text" formControlName="employer">
+             <input type="date" formControlName="start">
+             <input type="date" formControlName="end">
+             <button class="btn" type="submit">save</button>
+             <button class="btn grey" type="button" (click)="formGroup = undefined">cancel</button>
+            </form>
+            }
+            <button class="btn" type="button" (click)="select()">new</button>
             <ul>
-                <li>Technischer Support und IT-Infrastruktur-Management</li>
-                <li>Projektkoordination und technische Dokumentation</li>
-                <li>Kenntnisse: AutoCAD, Altium Designer, ProConcept</li>
+             @for (cv of cvs; track cv.employer) {
+             <li>{{ cv.employer }} {{ cv.start }} - {{ cv.end }}
+             <button class="btn" (click)="select(cv)">edit</button>
+             <button class="btn red" (click)="deleteCV(cv.id)">delete</button>
+             </li>
+             }
             </ul>
-        </div>
-
-        <div>
-            <p class="job-title">Technischer Einkäufer und Supporter</p>
-            <p class="company">Teltronic AG, Biberist</p>
-            <p class="date">März 2022 – September 2024</p>
-            <ul>
-                <li>Betreuung des Change-Managements</li>
-                <li>Erstellung von Produktionsunterlagen</li>
-                <li>Kenntnisse: Einkauf, AVOR, LumiQuote</li>
-            </ul>
-        </div>
-
-        <div>
-            <p class="job-title">Servicetechniker</p>
-            <p class="company">Chemia Brugg AG, Brugg</p>
-            <p class="date">März 2021 – März 2022</p>
-            <ul>
-                <li>Aufbau des Servicecenters</li>
-                <li>Technischer Support bei der Kundschaft</li>
-            </ul>
-        </div>
-
-        <div>
-            <p class="job-title">Pre-Inspection Specialist</p>
-            <p class="company">GE Renewable Energy, Oberentfelden</p>
-            <p class="date">November 2018 – März 2021</p>
-            <ul>
-                <li>Qualitätskontrolle und Montage von GIS-Anlagen</li>
-                <li>Kundenabnahmen mit internationalen Kunden</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Ausbildung</h2>
-
-        <div>
-            <p class="job-title">Wirtschaftsinformatiker HF</p>
-            <p class="company">hftm Höhere Fachschule Technik Mittelland</p>
-            <p class="date">Oktober 2023 – heute</p>
-            <ul>
-                <li>Kenntnisse: Microsoft Office</li>
-            </ul>
-        </div>
-
-        <div>
-            <p class="job-title">Eidg. Dipl. Technischer Kaufmann</p>
-            <p class="company">Minerva Schweiz AG</p>
-            <p class="date">August 2021 – Oktober 2022</p>
-            <ul>
-                <li>Fachgebiete: Supply Chain Management, Recht, BWL</li>
-                <li>Abschlussnote: 4.7</li>
-            </ul>
-        </div>
-
-        <div>
-            <p class="job-title">Handelsdiplom</p>
-            <p class="company">Minerva Schweiz AG</p>
-            <p class="date">Januar 2020 – Januar 2021</p>
-            <ul>
-                <li>Fachgebiete: Rechnungswesen, Business Management</li>
-            </ul>
-        </div>
-
-        <div>
-            <p class="job-title">Automatikmonteur EFZ</p>
-            <p class="company">Berufsschule Emmenbrücke & Sarnen</p>
-            <p class="date">2012 – 2015</p>
-        </div>
     </section>
 </body>

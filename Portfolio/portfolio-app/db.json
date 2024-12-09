@@ -1,0 +1,20 @@
+{
+  "about-me": [
+    {
+      "id": "detail",
+      "name": "Nathaniel Hafner",
+      "image": "/assets/profile.jpg"
+    }
+  ],
+  "cvs": [
+    {
+      "id": "2615",
+      "employer": "Teltronic",
+      "start": "2022-03-01",
+      "end": "2024-12-09"
+    }
+  ],
+  "books": [],
+  "projects": [],
+  "contact": []
+}

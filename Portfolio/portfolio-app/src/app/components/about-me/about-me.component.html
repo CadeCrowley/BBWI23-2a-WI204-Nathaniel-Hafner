@@ -1,5 +1,8 @@
 <h1>Wer bin ich?</h1>
-<p>{{ aboutMe?.name }}</p>
+<form #aboutMeForm="ngForm" (ngSubmit)="submit(aboutMeForm)">
+ <input type="text" name="name" [ngModel]="aboutMe?.name" required>
+ <button class="btn" type="submit" [disabled]="aboutMeForm.invalid">Speichern</button>
+</form>
 <img [src]="aboutMe?.imagePath">
 
 <div class="row">
