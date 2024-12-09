@@ -1,0 +1,104 @@
+/* Allgemeine Einstellungen */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Heller Hintergrund */
+    color: #333; /* Dunkelgrauer Text */
+  }
+  
+  /* Hauptüberschrift */
+  h2 {
+    font-size: 2.2rem;
+    color: #ff5722; /* Orange Akzent */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid #ff9800; /* Orange Unterstreichung */
+    padding-bottom: 10px;
+  }
+  
+  /* Formular Styling */
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff; /* Weißer Hintergrund */
+    border-radius: 12px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Abstand zwischen Formularfeldern */
+  
+    /* Label Styling */
+    label {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #555; /* Gedämpftes Grau */
+      display: block;
+      margin-bottom: 5px; /* Abstand zwischen Label und Eingabefeld */
+    }
+  
+    /* Eingabefelder */
+    input {
+      padding: 10px 15px; /* Mehr horizontaler Padding für Abstand */
+      border: 1px solid #ddd; /* Leichte Umrandung */
+      border-radius: 5px; /* Abgerundete Ecken */
+      font-size: 1rem;
+      color: #333;
+      width: 100%; /* Füllt die verfügbare Breite */
+      box-sizing: border-box; /* Berücksichtigt Padding in der Breite */
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  
+      &:focus {
+        border-color: #ff5722; /* Orange Umrandung beim Fokus */
+        box-shadow: 0 0 5px rgba(255, 87, 34, 0.5); /* Leichter Orange-Schimmer */
+        outline: none;
+      }
+    }
+  
+    /* Button Styling */
+    button {
+      padding: 12px;
+      background-color: #ff5722; /* Orange Hintergrund */
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+  
+      &:hover {
+        background-color: #ff9800; /* Hellorange beim Hover */
+        transform: scale(1.05); /* Leichtes Vergrößern */
+      }
+  
+      &:active {
+        background-color: #e64a19; /* Dunkleres Orange beim Klicken */
+      }
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    form {
+      padding: 15px;
+      gap: 15px;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    input {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+    }
+  }
+  

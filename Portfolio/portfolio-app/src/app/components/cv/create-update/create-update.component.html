@@ -1,0 +1,13 @@
+<h2>Neuer Lebenslauf</h2>
+<form (ngSubmit)="submitForm()">
+  <label for="title">Jobtitel:</label>
+  <input id="title" type="text" [(ngModel)]="cvData.title" name="title" required />
+
+  <label for="company">Firma:</label>
+  <input id="company" type="text" [(ngModel)]="cvData.company" name="company" required />
+
+  <label for="date">Zeitraum:</label>
+  <input id="date" type="text" [(ngModel)]="cvData.date" name="date" required />
+
+  <button type="submit">Speichern</button>
+</form>
