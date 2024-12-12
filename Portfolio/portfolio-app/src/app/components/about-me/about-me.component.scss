@@ -26,6 +26,23 @@ body {
     color: #555;
   }
   
+    /* Formular */
+    form {
+      display: flexbox;
+      justify-content: center;
+      padding: 20px;
+      justify-self: center;
+      max-width: 550px; /* Begrenzte Bildbreite */
+      border-radius: 5%; /* Rundes Profilbild */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sanfter Schatten */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+      &:hover {
+        transform: scale(1.1); /* Vergrößern beim Hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Tieferer Schatten */
+      }
+    }
+
   /* Bild Styling */
   img {
     display: block;
