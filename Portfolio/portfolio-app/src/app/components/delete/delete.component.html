@@ -1,0 +1,7 @@
+<h3>Willst du wirklich diesen Eintrag löschen?</h3>
+<p class="cv-details">
+    {{ CV?.employer }} {{ CV?.start }} {{ CV?.end }}
+ 
+<button class="btn danger" (click)="delete()">Ja</button>
+<button class="btn default" (click)="back()">Nein</button>
+</p>

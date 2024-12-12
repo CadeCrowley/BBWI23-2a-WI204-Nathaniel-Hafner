@@ -9,6 +9,8 @@ import { BooksComponent } from './components/books/books.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateUpdateComponent } from './components/create-update/create-update.component';
+import { DeleteComponent } from './components/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     CVComponent,
     ContactComponent,
     BooksComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    CreateUpdateComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

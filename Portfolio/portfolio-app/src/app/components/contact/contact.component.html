@@ -1,1 +1,56 @@
-<p>contact works!</p>
+<div class="contact-form">
+    <h2>Kontaktformular</h2>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          [(ngModel)]="contact.name" 
+          required 
+          #name="ngModel"
+          placeholder="Ihr Name">
+        <div *ngIf="name.invalid && name.touched" class="error">
+          Bitte geben Sie Ihren Namen ein.
+        </div>
+      </div>
+  
+      <!-- E-Mail -->
+      <div class="form-group">
+        <label for="email">E-Mail:</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          [(ngModel)]="contact.email" 
+          required 
+          email 
+          #email="ngModel"
+          placeholder="Ihre E-Mail-Adresse">
+        <div *ngIf="email.invalid && email.touched" class="error">
+          Bitte geben Sie eine gültige E-Mail-Adresse ein.
+        </div>
+      </div>
+  
+      <!-- Nachricht -->
+      <div class="form-group">
+        <label for="message">Nachricht:</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          [(ngModel)]="contact.message" 
+          required 
+          #message="ngModel"
+          placeholder="Ihre Nachricht"></textarea>
+        <div *ngIf="message.invalid && message.touched" class="error">
+          Bitte geben Sie eine Nachricht ein.
+        </div>
+      </div>
+  
+      <!-- Absenden -->
+      <button type="submit" class="btn" [disabled]="contactForm.invalid">Absenden</button>
+    </form>
+  </div>
+  

@@ -69,6 +69,12 @@ body {
       margin-top: 5px;
     }
   
+    button{
+      display: inline-block;
+      margin: 20px;
+      justify-self: center;
+  }
+
     ul,
     ol {
       margin-top: 10px;
@@ -80,8 +86,8 @@ body {
   
         /* Bulletpoint für Listen */
         &:before {
-          content: '•';
-          color: #e53935; /* Roter Bulletpoint */
+          content: '';
+          color: #000000; /* Roter Bulletpoint */
           font-size: 1.2rem;
           font-weight: bold;
           position: absolute;
@@ -99,7 +105,7 @@ body {
   
   /* Verlinkungen */
   a {
-    color: #e53935;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
   

@@ -3,15 +3,21 @@
     {
       "id": "detail",
       "name": "Nathaniel Hafner",
-      "image": "/assets/profile.jpg"
+      "image": "assets/profile.jpg"
     }
   ],
   "cvs": [
     {
-      "id": "2615",
-      "employer": "Teltronic",
-      "start": "2022-03-01",
-      "end": "2024-12-09"
+      "id": "b543",
+      "employer": "Arkane Productions Ltd.",
+      "start": "2055-01-01",
+      "end": "2088-04-05"
+    },
+    {
+      "id": "2c4f",
+      "employer": "Helldivers Co. KG",
+      "start": "3123-12-12",
+      "end": "1231-03-12"
     }
   ],
   "books": [],

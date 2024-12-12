@@ -1,0 +1,26 @@
+h3 {
+    display: flex;
+    justify-self: center;
+    padding: 20px;
+};
+
+button{
+    display: inline-block;
+    margin: 10px;
+    justify-self: center;
+}
+
+/* Styling für die CV-Details */
+.cv-details {
+    font-size: 1.2rem; /* Mittlere Schriftgröße */
+    color: #666; /* Gedämpfte Textfarbe */
+    text-align: center; /* Zentrierter Text */
+    margin-bottom: 20px; /* Abstand nach unten */
+  
+    /* Optional: Einzelne Daten hervorheben */
+    span {
+      font-weight: bold; /* Arbeitgeber fett darstellen */
+      color: #333; /* Dunklerer Farbton */
+    }
+  }
+  

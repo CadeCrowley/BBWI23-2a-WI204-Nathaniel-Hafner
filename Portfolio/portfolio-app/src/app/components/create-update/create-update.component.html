@@ -1,0 +1,12 @@
+@if (formGroup) {
+    <form [formGroup]=formGroup (ngSubmit)="saveCV()">
+     <input type="number" formControlName="id" hidden>
+     <input type="text" formControlName="employer">
+     <input type="date" formControlName="start">
+     <input type="date" formControlName="end">
+     <div class="button-container">
+     <button class="btn" type="submit">save</button>
+     <button class="btn grey" type="button" (click)="back()">cancel</button>
+     </div>
+    </form>
+}

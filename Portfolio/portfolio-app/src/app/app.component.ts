@@ -7,6 +7,7 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class AppComponent implements AfterViewInit {
   currentLanguage: string = 'de'; // Standard-Sprache (Japanisch)
+item: any;
 
   ngAfterViewInit(): void {
     // Initialisiere alle Dropdowns (Sprachwahl und Hamburger-Menü)
