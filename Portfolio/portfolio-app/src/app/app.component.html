@@ -33,7 +33,11 @@
 <ul id="menu-dropdown" class="dropdown-content">
   <li><a routerLink="/about-me">Profil</a></li>
   <li><a routerLink="/cv">Beruf und Arbeit</a></li>
-  <li><a routerLink="/cv/create-update">Neuer Eintrag</a>
+  <li class="group-item">
+    <ul class="sub-menu">
+      <li><a [routerLink]="['/cv', 'new']">Neu</a></li>
+    </ul>
+  </li>
   <li><a routerLink="/books">Meine Bücher</a></li>
   <li><a routerLink="/projects">Meine Projekte</a></li>
   <li><a routerLink="/contact">Kontaktieren</a></li>

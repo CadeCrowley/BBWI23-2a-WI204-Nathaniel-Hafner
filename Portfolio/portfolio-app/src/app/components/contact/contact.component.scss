@@ -1,0 +1,102 @@
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px 30px;
+    background: #fff; /* Weißer Hintergrund */
+    border-radius: 12px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+  
+    h2 {
+      color: #e53935; /* Roter Akzent */
+      font-size: 2rem;
+      border-bottom: 3px solid #ff5722; /* Rote Unterstreichung */
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+  
+    .form-group {
+      margin-bottom: 20px;
+  
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333; /* Dunkelgrauer Text */
+      }
+  
+      input,
+      textarea {
+        display: flex;
+        justify-self: center;
+        width: 95%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background: #f9f9f9; /* Heller Hintergrund */
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  
+        &:focus {
+          border-color: #ff5722; /* Orange beim Fokus */
+          box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+          outline: none;
+        }
+      }
+  
+      textarea {
+        min-height: 120px;
+        resize: vertical; /* Größenänderung nur vertikal erlauben */
+      }
+  
+      .error {
+        color: #e53935; /* Rote Fehlermeldung */
+        font-size: 0.9rem;
+        margin-top: 5px;
+      }
+    }
+  
+    .btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      display: inline-flex;
+      justify-content: center; /* Horizontale Zentrierung */
+      align-items: center; /* Vertikale Zentrierung */
+      text-align: center; /* Zentrierung für mehrzeiligen Text */
+      background: linear-gradient(90deg, #ff5722, #ff9800); /* Farbverlauf */
+      color: #fff; /* Weißer Text */
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background: linear-gradient(90deg, #ff9800, #ff5722); /* Umgekehrter Farbverlauf */
+      }
+  
+      &:disabled {
+        background: #ccc;
+        color: #666;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  /* Interaktive Effekte */
+  .contact-form:hover {
+    background-color: #ffe5e0; /* Leichter Orangeton beim Hover */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 15px;
+  
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  

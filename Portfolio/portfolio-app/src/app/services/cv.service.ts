@@ -22,4 +22,7 @@ export class CVService {
     deleteCV(id: number): Observable<void> {
         return this.http.delete<void>(`/api/cvs/${id}/`);
     }
+    getCVById(id: string): Observable<CV> {
+        return this.http.get<CV>('/api/cvs/' + id);
+      }
 }

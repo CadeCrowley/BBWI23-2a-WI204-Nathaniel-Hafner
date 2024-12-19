@@ -23,6 +23,11 @@
     gap: 40px; /* Abstand zwischen Sprachwahl und Menü */
   }
   
+  #menu-dropdown .empty-item {
+    height: 20px; /* Höhe des Abstands */
+    list-style: none; /* Keine Punkte oder Marker für den Eintrag */
+  }
+
   /* Sprachwahl */
   .right .dropdown-trigger {
     display: flex; /* Sprachwahl als flexibles Element */
@@ -58,6 +63,30 @@
     padding: 10px 15px; /* Innenabstand */
     display: block;
   }
+
+    /* Styling für die Gruppe */
+    .group-item {
+      .sub-menu {
+        list-style: none;
+        padding-left: 20px; /* Einrückung */
+        margin: 0;
+  
+        li {
+          margin: 0;
+  
+          > a {
+            padding: 8px 15px;
+            font-size: 14px;
+            color: #555;
+  
+            &:hover {
+              background-color: #f9f9f9;
+              color: #ff9800;
+            }
+          }
+        }
+      }
+    }
   
   .dropdown-content li > a:hover {
     background-color: #f1f1f1; /* Hellgrauer Hintergrund */
