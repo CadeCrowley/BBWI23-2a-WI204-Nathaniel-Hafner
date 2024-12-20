@@ -46,8 +46,9 @@ body {
   /* Bild Styling */
   img {
     display: block;
-    max-width: 150px; /* Begrenzte Bildbreite */
-    margin: 20px auto;
+    max-width: 350px; /* Begrenzte Bildbreite */
+    padding: 4px;
+    margin: 40px auto;
     border-radius: 50%; /* Rundes Profilbild */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sanfter Schatten */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
