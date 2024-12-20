@@ -9,9 +9,9 @@ export class AuthService {
   constructor() {}
 
   login(username: string, password: string): boolean {
-    if (username === 'user' && password === 'password') {
+    if (username === 'admin' && password === '1234') {
       this.isAuthenticated = true;
-      localStorage.setItem('user', username); // Speichere den Benutzernamen oder Token
+      localStorage.setItem('admin', username); // Speichere den Benutzernamen oder Token
       return true;
     }
     return false;
@@ -19,10 +19,10 @@ export class AuthService {
 
   logout(): void {
     this.isAuthenticated = false;
-    localStorage.removeItem('user'); // Entferne die Login-Daten
+    localStorage.removeItem('admin'); // Entferne die Login-Daten
   }
 
   isLoggedIn(): boolean {
-    return !!localStorage.getItem('user'); // Prüfe, ob ein Benutzer eingeloggt ist
+    return !!localStorage.getItem('admin'); // Prüfe, ob ein Benutzer eingeloggt ist
   }
 }
