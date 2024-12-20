@@ -1,4 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router'; // Import für Navigation
+import { AuthService } from './services/auth.service'; // Import des AuthService
 
 @Component({
   selector: 'app-root',
@@ -6,8 +8,10 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  currentLanguage: string = 'de'; // Standard-Sprache (Japanisch)
-item: any;
+  currentLanguage: string = 'de'; // Standard-Sprache (Deutsch)
+  item: any;
+
+  constructor(private authService: AuthService, private router: Router) {} // Services injizieren
 
   ngAfterViewInit(): void {
     // Initialisiere alle Dropdowns (Sprachwahl und Hamburger-Menü)
@@ -22,5 +26,16 @@ item: any;
   switchLanguage(lang: string): void {
     this.currentLanguage = lang;
     console.log(`Sprache geändert zu: ${lang}`);
+  }
+
+  // Logout-Logik
+  onLogout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+    console.log('Benutzer wurde ausgeloggt');
+  }
+
+  isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
   }
 }

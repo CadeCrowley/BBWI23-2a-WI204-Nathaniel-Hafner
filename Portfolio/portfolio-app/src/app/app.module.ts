@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateUpdateComponent } from './components/create-update/create-update.component';
 import { DeleteComponent } from './components/delete/delete.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DeleteComponent } from './components/delete/delete.component';
     BooksComponent,
     ProjectsComponent,
     CreateUpdateComponent,
-    DeleteComponent
+    DeleteComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

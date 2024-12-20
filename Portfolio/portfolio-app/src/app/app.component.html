@@ -41,6 +41,10 @@
   <li><a routerLink="/books">Meine Bücher</a></li>
   <li><a routerLink="/projects">Meine Projekte</a></li>
   <li><a routerLink="/contact">Kontaktieren</a></li>
+  <li *ngIf="isLoggedIn()">
+    <button (click)="onLogout()" style="background: none; border: none; color: white; cursor: pointer;">Logout</button>
+  </li>
+  
 </ul>
 
 <router-outlet></router-outlet>
