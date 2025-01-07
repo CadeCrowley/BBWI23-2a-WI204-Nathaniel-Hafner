@@ -8,10 +8,12 @@ import { ContactComponent } from './components/contact/contact.component';
 import { BooksComponent } from './components/books/books.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CreateUpdateComponent } from './components/create-update/create-update.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { HttpInterceptorService } from './services/interceptor/http-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { LoginComponent } from './components/login/login.component';
     ProjectsComponent,
     CreateUpdateComponent,
     DeleteComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { LoginComponent } from './components/login/login.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true},],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { CVService } from '../../services/cv.service';
 import { ActivatedRoute } from '@angular/router';
-import { CV } from '../../models/cv';
-import { map, mergeMap, of } from 'rxjs';
+import { map } from 'rxjs';
+import { CV } from './../../models/cv';
+import { CVService } from './../../services/cv.service';
 
 @Component({
   selector: 'app-create-update',
@@ -15,25 +15,24 @@ export class CreateUpdateComponent implements OnInit {
   formGroup?: FormGroup;
 
   constructor(
+    private route: ActivatedRoute,
     private cvService: CVService,
-    private route: ActivatedRoute, 
-  ){}
+  ){} 
 
   ngOnInit(): void {
-    this.route.paramMap.pipe(
-      map(params => params.get('id')),
-      mergeMap(id => id ? this.cvService.getCVById(id) : of(null))
-    ).subscribe(cv => {
-      this.formGroup = new FormGroup({
-        employer: new FormControl(cv?.employer ?? null, [Validators.required]),
-        start: new FormControl(cv?.start ?? null, [Validators.required]),
-        end: new FormControl(cv?.end ?? null, []),
-      });
-      if (cv?.id) {
-        this.formGroup.addControl('id', new FormControl(cv?.id ?? null, []));
-      }
-    });
+    this.route.data.pipe(
+      map(data => data['record'] ?? null)
+    ).subscribe(cv => this.initForm(cv))
   }
+
+  initForm(cv: CV| null): void{
+    this.formGroup = new FormGroup({
+      employer: new FormControl(cv?.employer ?? null, [Validators.required]),
+      start: new FormControl(cv?.start ?? null, [Validators.required]),
+      end: new FormControl(cv?.end ?? null, []),
+    });
+    this.formGroup.addControl('id', new FormControl(cv?.id ?? null, []))
+  } 
 
   saveCV(): void {
     if (this.formGroup?.valid) {
@@ -43,14 +42,17 @@ export class CreateUpdateComponent implements OnInit {
       } else {
         observable = this.cvService.createCV(this.formGroup.value);
       }
-      observable.subscribe(() => history.back());
+      observable.subscribe(() => {
+        this.formGroup?.markAsUntouched();
+        this.back();
+      });
     } else {
       alert('CV is invalid');
     }
   }
 
-  back(): void {
+  back() {
     history.back();
   }
-  
+    
 }

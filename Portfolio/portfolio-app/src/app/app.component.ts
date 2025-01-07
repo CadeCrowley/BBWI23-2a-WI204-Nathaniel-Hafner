@@ -8,10 +8,14 @@ import { AuthService } from './services/auth.service'; // Import des AuthService
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
+  isAuthenticated = false;
   currentLanguage: string = 'de'; // Standard-Sprache (Deutsch)
   item: any;
 
-  constructor(private authService: AuthService, private router: Router) {} // Services injizieren
+  constructor(private authService: AuthService, private router: Router) {
+    this.router.events
+    .subscribe(() => this.isAuthenticated = this.authService.isAuthenticated())
+  } // Services injizieren
 
   ngAfterViewInit(): void {
     // Initialisiere alle Dropdowns (Sprachwahl und Hamburger-Menü)
@@ -35,7 +39,4 @@ export class AppComponent implements AfterViewInit {
     console.log('Benutzer wurde ausgeloggt');
   }
 
-  isLoggedIn(): boolean {
-    return this.authService.isLoggedIn();
-  }
 }

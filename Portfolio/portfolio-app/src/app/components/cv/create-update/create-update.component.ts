@@ -12,6 +12,7 @@ export class CreateUpdateComponent {
     company: '',
     date: ''
   };
+  formGroup: any;
 
   constructor(private router: Router) {}
 

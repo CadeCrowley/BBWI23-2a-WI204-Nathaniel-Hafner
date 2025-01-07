@@ -6,68 +6,74 @@
       "image": "assets/profile.jpg"
     }
   ],
-"cvs": [
-  {
-    "id": "b543",
-    "employer": "Arkane Productions Ltd.",
-    "start": "2055-01-01",
-    "end": "2088-04-05"
-  },
-  {
-    "id": "2c4f",
-    "employer": "Helldivers Co. KG",
-    "start": "3123-12-12",
-    "end": "1231-03-12"
-  },
-  {
-    "id": "a1d2",
-    "employer": "Dragonforge Industries",
-    "start": "2077-06-15",
-    "end": "2100-12-31"
-  },
-  {
-    "id": "9b83",
-    "employer": "Mystic Realms Incorporated",
-    "start": "2150-03-01",
-    "end": "2200-11-30"
-  },
-  {
-    "id": "f3e7",
-    "employer": "Starfall Enterprises",
-    "start": "3001-07-20",
-    "end": "3050-09-15"
-  },
-  {
-    "id": "d4f2",
-    "employer": "Ethereal Nexus Ltd.",
-    "start": "2500-04-10",
-    "end": "2600-08-18"
-  },
-  {
-    "id": "z7y8",
-    "employer": "Runestone Consulting Group",
-    "start": "2040-02-25",
-    "end": "2070-06-30"
-  },
-  {
-    "id": "x3q9",
-    "employer": "Galactic Ventures Inc.",
-    "start": "3090-11-01",
-    "end": "3120-01-31"
-  },
-  {
-    "id": "m5t3",
-    "employer": "Phoenix Ascension Corp.",
-    "start": "2125-05-10",
-    "end": "2155-10-20"
-  },
-  {
-    "id": "k9b1",
-    "employer": "Shadowforge Solutions",
-    "start": "2025-09-15",
-    "end": "2045-03-12"
-  }
-],
+  "cvs": [
+    {
+      "employer": "Arkane Productions Ltd Co.",
+      "start": "2055-01-01",
+      "end": "2090-01-05",
+      "id": "b543"
+    },
+    {
+      "id": "2c4f",
+      "employer": "Helldivers Co. KG",
+      "start": "3123-12-12",
+      "end": "1231-03-12"
+    },
+    {
+      "id": "a1d2",
+      "employer": "Dragonforge Industries",
+      "start": "2077-06-15",
+      "end": "2100-12-31"
+    },
+    {
+      "id": "9b83",
+      "employer": "Mystic Realms Incorporated",
+      "start": "2150-03-01",
+      "end": "2200-11-30"
+    },
+    {
+      "id": "f3e7",
+      "employer": "Starfall Enterprises",
+      "start": "3001-07-20",
+      "end": "3050-09-15"
+    },
+    {
+      "id": "d4f2",
+      "employer": "Ethereal Nexus Ltd.",
+      "start": "2500-04-10",
+      "end": "2600-08-18"
+    },
+    {
+      "id": "z7y8",
+      "employer": "Runestone Consulting Group",
+      "start": "2040-02-25",
+      "end": "2070-06-30"
+    },
+    {
+      "id": "x3q9",
+      "employer": "Galactic Ventures Inc.",
+      "start": "3090-11-01",
+      "end": "3120-01-31"
+    },
+    {
+      "id": "m5t3",
+      "employer": "Phoenix Ascension Corp.",
+      "start": "2125-05-10",
+      "end": "2155-10-20"
+    },
+    {
+      "id": "k9b1",
+      "employer": "Shadowforge Solutions",
+      "start": "2025-09-15",
+      "end": "2045-03-12"
+    },
+    {
+      "id": "3ce1",
+      "employer": "Fishhead Studios Ltd.",
+      "start": "2014-02-01",
+      "end": "2014-05-04"
+    }
+  ],
   "books": [],
   "projects": [],
   "contact": []

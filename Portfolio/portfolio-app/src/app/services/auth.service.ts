@@ -4,25 +4,24 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  private isAuthenticated = false;
 
-  constructor() {}
+  LOCALSTORAGE_KEY = 'user'
+  
+  constructor() { }
 
   login(username: string, password: string): boolean {
     if (username === 'admin' && password === '1234') {
-      this.isAuthenticated = true;
-      localStorage.setItem('admin', username); // Speichere den Benutzernamen oder Token
+      localStorage.setItem(this.LOCALSTORAGE_KEY, username);
       return true;
     }
     return false;
   }
 
-  logout(): void {
-    this.isAuthenticated = false;
-    localStorage.removeItem('admin'); // Entferne die Login-Daten
+  logout() {
+    localStorage.removeItem(this.LOCALSTORAGE_KEY);
   }
 
-  isLoggedIn(): boolean {
-    return !!localStorage.getItem('admin'); // Prüfe, ob ein Benutzer eingeloggt ist
+  isAuthenticated(): boolean {
+    return !!localStorage.getItem(this.LOCALSTORAGE_KEY)
   }
 }
