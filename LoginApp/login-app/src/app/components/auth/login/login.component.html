@@ -1,10 +1,12 @@
-<h2>ログイン</h2>
-<form>
-  <label for="username">ユーザー名</label>
-  <input type="text" id="username" name="username" />
+<!-- login.component.html -->
+<h2>Login</h2>
+<form (ngSubmit)="onSubmit()">
+  <label for="username">Benutzername:</label>
+  <input type="text" [(ngModel)]="username" name="username" required />
 
-  <label for="password">パスワード</label>
-  <input type="password" id="password" name="password" />
+  <label for="password">Passwort:</label>
+  <input type="password" [(ngModel)]="password" name="password" required />
 
-  <button type="submit">ログイン</button>
+  <button type="submit">Login</button>
 </form>
+<p NgIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
