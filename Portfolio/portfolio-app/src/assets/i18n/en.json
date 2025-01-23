@@ -1,12 +1,19 @@
 {
-    "TITLE": "My Portfolio",
-    "SLOGAN": "I am a tech enthusiast with a passion for innovation, gaming, and Japanese culture.",
+  "APP": {
+    "TITLE": "Nate's No-No Square",
     "MENU": {
-      "ABOUT_ME": "About Me",
-      "RESUME": "Resume",
-      "SETTINGS": "Settings",
       "PROFILE": "Profile",
+      "CV": "Career & Work",
+      "NEW": "New",
+      "BOOKS": "My Books",
+      "PROJECTS": "My Projects",
+      "CONTACT": "Contact",
       "LOGOUT": "Logout"
+    },
+    "PROFILE": {
+      "TITLE": "Profile",
+      "SUBTITLE": "A few words about me",
+      "DESCRIPTION": "I am a technology enthusiast and digital thinker with a passion for innovation, gaming, sci-fi, and Japanese culture. Throughout my professional career, I have specialized in quality assurance, technical documentation, and customer support, and now I would like to immerse myself more in the IT field.The world of computer science fascinates me, which is why I am furthering my education in business informatics.I love finding creative solutions and overcoming technical challenges."
     }
   }
-  
+}

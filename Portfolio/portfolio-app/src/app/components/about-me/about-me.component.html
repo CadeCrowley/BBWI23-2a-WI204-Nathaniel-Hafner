@@ -1,4 +1,4 @@
-<h1>Wer bin ich?</h1>
+<h1>{{ 'APP.PROFILE.TITLE' | translate }}</h1>
 <form #aboutMeForm="ngForm" (ngSubmit)="submit(aboutMeForm)">
  <input type="text" name="name" [ngModel]="aboutMe?.name" required>
  <button class="btn" type="submit" [disabled]="aboutMeForm.invalid">Speichern</button>
@@ -9,10 +9,8 @@
     <div class="col s12">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
-          <span class="card-title">Slogan</span>
-          <p>Ich bin ein Technologie-Enthusiast und Digitaldenker mit einer Leidenschaft für Innovation, Gaming, Sci-Fi und die japanische Kultur. In meiner beruflichen Laufbahn habe ich mich auf Qualitätssicherung, technische Dokumentation und Kundenbetreuung spezialisiert, vermehrt möchte ich nun in die IT eintauchen. 
-            Die Welt der Informatik fasziniert mich, weshalb ich mich im Bereich Wirtschaftsinformatik weiterbilde.
-            Ich liebe es, kreative Lösungen zu finden und technische Herausforderungen zu meistern.</p>
+          <span class="card-title">{{ 'APP.PROFILE.SUBTITLE' | translate }}</span>
+          <p>{{ 'APP.PROFILE.DESCRIPTION' | translate }}</p>
         </div>
         <div class="card-action">
           <a href="https://www.linkedin.com/in/nathaniel-h-7727991a0/">LinkedIn</a>

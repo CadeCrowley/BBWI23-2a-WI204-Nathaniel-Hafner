@@ -1,7 +1,7 @@
 <nav>
   <div class="nav-wrapper">
     <!-- Brand Logo -->
-    <a href="#" class="brand-logo">Nate's No No Square</a>
+    <a routerLink="/about-me" class="brand-logo">{{ 'APP.TITLE' | translate }}</a>
 
     <!-- Sprachwahl und Hamburger-Menü -->
     <ul class="right">
@@ -24,27 +24,38 @@
 
 <!-- Dropdown für Sprachwahl -->
 <ul id="language-dropdown" class="dropdown-content">
-  <li><a href="#" (click)="switchLanguage('de')">Deutsch</a></li>
-  <li><a href="#" (click)="switchLanguage('en')">English</a></li>
-  <li><a href="#" (click)="switchLanguage('ja')">日本語</a></li>
+  <!-- 
+    Falls du bei Klick nur die Sprache ändern willst, 
+    kannst du das routerLink entfernen oder anpassen.
+  -->
+  <li>
+    <a routerLink="/about-me" (click)="switchLanguage('de')">Deutsch</a>
+  </li>
+  <li>
+    <a routerLink="/about-me" (click)="switchLanguage('en')">English</a>
+  </li>
+  <li>
+    <a routerLink="/about-me" (click)="switchLanguage('ja')">日本語</a>
+  </li>
 </ul>
 
 <!-- Dropdown für Menü -->
 <ul id="menu-dropdown" class="dropdown-content">
-  <li><a routerLink="/about-me">Profil</a></li>
-  <li><a routerLink="/cv">Beruf und Arbeit</a></li>
+  <li><a routerLink="/about-me">{{ 'APP.MENU.PROFILE' | translate }}</a></li>
+  <li><a routerLink="/cv">{{ 'APP.MENU.CV' | translate }}</a></li>
   <li class="group-item">
     <ul class="sub-menu">
-      <li><a [routerLink]="['/cv', 'new']">Neu</a></li>
+      <li>
+        <a [routerLink]="['/cv', 'new']">{{ 'APP.MENU.NEW' | translate }}</a>
+      </li>
     </ul>
   </li>
-  <li><a routerLink="/books">Meine Bücher</a></li>
-  <li><a routerLink="/projects">Meine Projekte</a></li>
-  <li><a routerLink="/contact">Kontaktieren</a></li>
+  <li><a routerLink="/books">{{ 'APP.MENU.BOOKS' | translate }}</a></li>
+  <li><a routerLink="/projects">{{ 'APP.MENU.PROJECTS' | translate }}</a></li>
+  <li><a routerLink="/contact">{{ 'APP.MENU.CONTACT' | translate }}</a></li>
   <li>
-    <button (click)="onLogout()">Logout</button>
+    <button (click)="onLogout()">{{ 'APP.MENU.LOGOUT' | translate }}</button>
   </li>
-  
 </ul>
 
 <router-outlet></router-outlet>

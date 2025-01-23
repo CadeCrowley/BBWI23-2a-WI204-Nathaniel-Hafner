@@ -1,0 +1,20 @@
+{
+    "APP": {
+      "TITLE": "Nates Nicht-Nein-Quadrat",
+      "MENU": {
+        "PROFILE": "Profil",
+        "CV": "Beruf und Arbeit",
+        "NEW": "Neu",
+        "BOOKS": "Meine Bücher",
+        "PROJECTS": "Meine Projekte",
+        "CONTACT": "Kontaktieren",
+        "LOGOUT": "Logout"
+      },
+      "PROFILE": {
+        "TITLE": "Profil",
+        "SUBTITLE": "Ein paar Worte über mich",
+        "DESCRIPTION": "Ich bin ein Technologie-Enthusiast und Digitaldenker mit einer Leidenschaft für Innovation, Gaming, Sci-Fi und die japanische Kultur. In meiner beruflichen Laufbahn habe ich mich auf Qualitätssicherung, technische Dokumentation und Kundenbetreuung spezialisiert, vermehrt möchte ich nun in die IT eintauchen. Die Welt der Informatik fasziniert mich, weshalb ich mich im Bereich Wirtschaftsinformatik weiterbilde.Ich liebe es, kreative Lösungen zu finden und technische Herausforderungen zu meistern."
+      }
+    }
+  }
+  

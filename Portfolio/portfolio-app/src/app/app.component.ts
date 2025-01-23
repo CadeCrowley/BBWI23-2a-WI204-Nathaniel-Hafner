@@ -1,6 +1,12 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { Router } from '@angular/router'; // Import für Navigation
-import { AuthService } from './services/auth.service'; // Import des AuthService
+import { Router } from '@angular/router';
+import { AuthService } from './services/auth.service';
+
+// ngx-translate
+import { TranslateService } from '@ngx-translate/core';
+
+// Für Materialize CSS (sofern du es nutzt)
+declare var M: any;
 
 @Component({
   selector: 'app-root',
@@ -9,34 +15,47 @@ import { AuthService } from './services/auth.service'; // Import des AuthService
 })
 export class AppComponent implements AfterViewInit {
   isAuthenticated = false;
-  currentLanguage: string = 'de'; // Standard-Sprache (Deutsch)
-  item: any;
+  currentLanguage: string = 'de'; // Standardsprache
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private translate: TranslateService
+  ) {
+    // verfügbare Sprachen definieren
+    this.translate.addLangs(['de', 'en', 'ja']);
+
+    // Standard- und Fallback-Sprache setzen
+    this.translate.setDefaultLang('de');
+
+    // Anfangssprache (entspricht currentLanguage)
+    this.translate.use(this.currentLanguage);
+
+    // Überwache Router-Events, um isAuthenticated aktuell zu halten
     this.router.events
-    .subscribe(() => this.isAuthenticated = this.authService.isAuthenticated())
-  } // Services injizieren
+      .subscribe(() => this.isAuthenticated = this.authService.isAuthenticated());
+  }
 
   ngAfterViewInit(): void {
-    // Initialisiere alle Dropdowns (Sprachwahl und Hamburger-Menü)
+    // Initialisiere alle Dropdowns (Sprachwahl und Menü) – MaterializeCSS
     const dropdownElems = document.querySelectorAll('.dropdown-trigger');
     M.Dropdown.init(dropdownElems, {
-      coverTrigger: false, // Dropdown erscheint unterhalb des Triggers
-      closeOnClick: true   // Dropdown schließt nach Auswahl
+      coverTrigger: false,
+      closeOnClick: true
     });
   }
 
   // Sprachumschaltung
   switchLanguage(lang: string): void {
     this.currentLanguage = lang;
+    this.translate.use(lang); // ngx-translate auf neue Sprache umschalten
     console.log(`Sprache geändert zu: ${lang}`);
   }
 
-  // Logout-Logik
+  // Logout-Funktion
   onLogout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);
     console.log('Benutzer wurde ausgeloggt');
   }
-
 }
