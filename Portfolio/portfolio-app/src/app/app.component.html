@@ -41,7 +41,7 @@
   <li><a routerLink="/books">Meine Bücher</a></li>
   <li><a routerLink="/projects">Meine Projekte</a></li>
   <li><a routerLink="/contact">Kontaktieren</a></li>
-  <li *ngIf="isLoggedIn()">
+  <li>
     <button (click)="onLogout()">Logout</button>
   </li>
   

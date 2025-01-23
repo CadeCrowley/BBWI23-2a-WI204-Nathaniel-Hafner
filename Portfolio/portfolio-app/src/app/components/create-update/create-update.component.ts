@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { CV } from './../../models/cv';
 import { CVService } from './../../services/cv.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-create-update',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './create-update.component.html',
   styleUrl: './create-update.component.scss'
 })

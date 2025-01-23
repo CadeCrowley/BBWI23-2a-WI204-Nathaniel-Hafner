@@ -9,7 +9,7 @@ import { BooksComponent } from './components/books/books.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { CreateUpdateComponent } from './components/create-update/create-update.component';
+import { CreateUpdateComponent } from './components/cv/create-update/create-update.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
